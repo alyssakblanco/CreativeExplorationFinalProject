@@ -1,0 +1,33 @@
+start page
+ > btn: "this way" linkto: partyRoom
+ > btn: "that way" linkto: catchMeIfYouCan
+
+partyRoom
+ > btn: "activate party mode" function: rgb background, music?, two buttons appear, dancing
+ > btn: "choice A" linkto: matchingMinigame
+ > btn: "choice B" linkto: numberBlocksMinigame
+
+catchMeIfYouCan
+ > img[]: random shapes floating around the screen & two buttons 
+ > btn: "choice A" linkto: numberBlocksMinigame
+ > btn: "choice B" linkto: matchingMinigame
+
+matchingMinigame
+ > use code from last assignment, on winstate, show two btns
+ > btn: "choice A" linkto: btnRoom
+ > btn: "choice B" linkto: optionsRoom
+
+numberBlocksMinigame
+ > three groups of squares, type # of squares under each, passcode style game
+ > btn: "choice A" linkto: btnRoom
+ > btn: "choice B" linkto: optionsRoom
+
+btnRoom
+ > fill page with buttons(diff shapes or colors?), only one works, others dissapear onclick,    pop sound?
+ > btn: "choice" linkto: end
+
+optionsRoom
+ > all in a row
+ > btn: moves around mouse, never clickable
+ > btn: dissapears on hover, never clickable
+ > btn: "choice" linkto: end
