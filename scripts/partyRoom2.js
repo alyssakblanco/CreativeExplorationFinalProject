@@ -7,6 +7,12 @@ let time1 = 0;
 let time2 = 250;
 let j = 0;
 
+// loding in party music
+let music;
+function preload(){
+    music = loadSound("https://alyssakblanco.github.io/CreativeExplorationFinalProject/scripts/partyMusic.mp3");
+}
+
 function setup() {
     //setting canvas as full screen background
     let canvas = createCanvas(windowWidth, windowHeight);  
@@ -28,6 +34,7 @@ function setup() {
 }
 
 function draw(){
+    pop.play();
     // colors and saving them in an array
     let a = color('#248EA6');
     let b = color('#25C7D9');
