@@ -14,6 +14,8 @@ function preload(){
 }
 
 function setup() {
+    music.play();
+    
     //setting canvas as full screen background
     let canvas = createCanvas(windowWidth, windowHeight);  
     canvas.position(0,0);
@@ -34,7 +36,7 @@ function setup() {
 }
 
 function draw(){
-    music.play();
+    
     // colors and saving them in an array
     let a = color('#248EA6');
     let b = color('#25C7D9');
