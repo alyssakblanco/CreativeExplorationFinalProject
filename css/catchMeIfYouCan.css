@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,300;1,400&family=Prata&display=swap');
+/* font-family: 'Lato', sans-serif;
+font-family: 'Prata', serif; */
+:root{
+    --blue: #248EA6;
+    --lightBlue: #25C7D9;
+    --yellow: #F2D338;
+    --orange: #F2622E;
+    --red: #F23030;
+}
+
+*{
+    margin: 0px;
+}
+
+body{
+    overflow: hidden;
+}
+
+button{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 90%;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid;
+    background-color: var(--yellow);
+}

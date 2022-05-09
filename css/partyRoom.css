@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,300;1,400&family=Prata&display=swap');
+/* font-family: 'Lato', sans-serif;
+font-family: 'Prata', serif; */
+:root{
+    --blue: #248EA6;
+    --lightBlue: #25C7D9;
+    --yellow: #F2D338;
+    --orange: #F2622E;
+    --red: #F23030;
+}
+
+*{
+    margin: 0px;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnHolder{
+    display: flex;
+    justify-content: center;
+    height: 50vw;
+    width: 50vw;
+    z-index: 99;
+}
+#btnHolder2{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    z-index: 9;
+}
+
+button{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    /* width: 40%; */
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.partyBtn{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    border-radius: 50%;
+    font-size: 3.25rem;
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--yellow);
+}
+#partyTxt {
+    font-style: italic;
+}

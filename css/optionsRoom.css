@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,300;1,400&family=Prata&display=swap');
+/* font-family: 'Lato', sans-serif;
+font-family: 'Prata', serif; */
+:root{
+    --lightPurple: #9959D9;
+    --darkPurple: #401C8C;
+    --orange: #F28322;
+    --darkOrange: #F26716;
+    --redOrange: #F2360C;
+}
+
+*{
+    margin: 0px;
+}
+
+h1{
+    font-family: 'Prata', serif;
+    width: 100%;  
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#btnHolder{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+button{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    width: 20%;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.btnA{
+    background-color: var(--orange);
+    color: white;
+    cursor: none;
+}
+.btnB{
+    background-color: var(--darkOrange);
+    color: white;
+}
+.btnC{
+    background-color: var(--redOrange);
+    color: white;
+}

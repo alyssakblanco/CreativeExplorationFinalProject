@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,300;1,400&family=Prata&display=swap');
+/* font-family: 'Lato', sans-serif;
+font-family: 'Prata', serif; */
+:root{
+    --purple: #F2059F;
+    --blue: #04B2D9;
+    --green: #04D94F;
+    --yellow: #F2CB05;
+    --orange: #F28705;
+}
+
+*{
+    margin: 0px;
+}
+
+h1{
+    font-family: 'Prata', serif;
+    width: 100%;  
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+#inputs{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+    margin-left: 25%;
+}
+
+.code{
+    width: 10%;
+    text-align: center;
+    height: 1.5rem;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#btnHolder{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+button{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    width: 40%;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.btnA{
+    background-color: var(--purple);
+    color: var(--yellow);
+}
+.btnB{
+    background-color: var(--yellow);
+    color: var(--purple);
+}

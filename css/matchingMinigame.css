@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,300;1,400&family=Prata&display=swap');
+/* font-family: 'Lato', sans-serif;
+font-family: 'Prata', serif; */
+:root{
+    --purple: #F2059F;
+    --blue: #04B2D9;
+    --green: #04D94F;
+    --yellow: #F2CB05;
+    --orange: #F28705;
+}
+
+*{
+    margin: 0px;
+}
+
+h1{
+    font-family: 'Prata', serif;
+    width: 100%;  
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+#gameBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 75%;
+}
+
+#btnHolder{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left:10%;
+}
+
+button{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.main{
+    background-color: var(--green);
+    color: white;
+    margin-top: 1rem; 
+}
+.btnA{
+    background-color: var(--purple);
+    color: var(--yellow);
+}
+.btnB{
+    background-color: var(--yellow);
+    color: var(--purple);
+}
