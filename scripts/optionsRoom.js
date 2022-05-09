@@ -10,6 +10,7 @@ function setup() {
     canvas.position(0,0);
     canvas.style("z-index", "-1");
 
+    // creating buttons and attaching them to the dom
     btn1 = createButton("pick me");
     btn1.addClass('btn');
     btn1.addClass('btnA');
@@ -33,28 +34,24 @@ function setup() {
 
 function draw(){
     let lightPurple = color('#9959D9');
-    let darkPurple = color('#401C8C');
-    let orange = color('#F28322');
-    let darkOrange = color('#F26716');
-    let redOrange = color('#F2360C');
-
     background(lightPurple);
 
+    // wait until you try to click btn before it starts to follow
     btn2.position(x, y);
-
     if(tried){
         x = mouseX + 30; 
         y = mouseY + 30;  
     }
 }
 
+// making btn follow behind cursor
 function changePosition(){ 
     x = mouseX + 30; 
     y = mouseY + 30;
     tried = true;
 }
 
-
+// trying to get this to work, was only working when the console was open for some reason
 function disappear(){
     btn1.style("display", "none");
 }
@@ -65,4 +62,8 @@ function appear(){
 
 function linkToA(){
     window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/end.html","_self");
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }

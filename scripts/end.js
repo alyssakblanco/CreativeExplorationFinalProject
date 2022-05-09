@@ -11,6 +11,7 @@ function setup() {
     canvas.position(0,0);
     canvas.style("z-index", "-1");
 
+    // creating buttons and attaching them to the dom
     btn1 = createButton("play again");
     btn1.mousePressed(firstClick);
     btn1.addClass('btn');
@@ -25,7 +26,10 @@ function setup() {
     btn2.parent("btnHolder");
     btn2.style("display", "none");
 
+    // creating a color array
     colors = [color('#F2059F'), color('#2CB1BF'), color('#F2CB07')];
+
+    // creating 100 confetti objects and putting them into an array
     for (let i = 0; i < 100; i++) {
       confetti[i] = new Confetti(random(0, width), random(-height, 0), random(0, 1));
     }
@@ -34,24 +38,28 @@ function setup() {
 function draw(){
     background(color('#F2D5EA'));
 
+    // display first half of the array
     for (let i = 0; i < confetti.length / 2; i++) {
         confetti[i].confettiDisplay();
     
+        // once confetti falls off screen, create it again
         if (confetti[i].y > height) {
           confetti[i] = new Confetti(random(0, width), random(-height, 0), random(-1, 1));
         }
       }
     
+    // display second half of array
     for (let i = int(confetti.length / 2); i < confetti.length; i++) {
         confetti[i].confettiDisplay();
     
+        // once confetti falls off screen, create it again
         if (confetti[i].y > height) {
           confetti[i] = new Confetti(random(0, width), random(-height, 0), random(-1, 1));
         }
     }
 }
 
-
+// false first click
 function firstClick(){
     btn1.style("display", "none");
     btn2.style("display", "block");
@@ -61,6 +69,7 @@ function linkToA(){
     window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/index.html","self");
 }
 
+// confetti object constructor
 class Confetti {
     constructor(x, y, s) {
       this.x = x;
@@ -74,6 +83,7 @@ class Confetti {
       this.form = round(random(0, 1));
     }
   
+    // displaying and rotating the objects
     confettiDisplay() {
       fill(this.color);
       noStroke();
@@ -90,10 +100,14 @@ class Confetti {
       }
       pop();
   
-      this.time = this.time + 0.1;
+      this.time += 0.1;
   
       this.speed += 1 / 200;
   
       this.y += this.speed;
     }
-  }
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}

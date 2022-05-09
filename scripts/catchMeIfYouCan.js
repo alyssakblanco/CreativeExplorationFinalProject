@@ -1,6 +1,6 @@
 console.log("catch me page");
 
-let bugs = []; // array of Jitter objects
+let bugs = []; 
 let btn1, btn2;
 let x;
 let colors = [];
@@ -11,28 +11,35 @@ function setup() {
   canvas.position(0,0);
   canvas.style("z-index", "-1");
 
+  // color array
   colors = [color('#F2D338'), color('#F2622E'), color('#F23030')];
 
-  // Create objects
+  // create 48 circles and 2 buttons
   for (let i = 0; i < 50; i++) {
     if( i === 0 ){
+        // id=0
         bugs.push(new Button("click me!", linkToA));
     }else if( i === 25 ){
+        // id=25 
         bugs.push(new Button("pick me!", linkToB));
     }else{
-        bugs.push(new Jitter());
+        bugs.push(new Circles());
     } 
   }
 }
 
 function draw() {
   background(color('#25C7D9'));
+
+  // continuosly move objects
   for (let i = 0; i < bugs.length; i++) {
     bugs[i].move();
     bugs[i].display();
   }
 }
 
+// class for creating a button
+// originally used a function constructor but my IDE changed it to a class lol
 class Button {
   constructor(txt, f) {
     this.x = random(width);
@@ -40,10 +47,12 @@ class Button {
     this.d = random(70, 90);
     this.speed = random(5,8);
 
+    // making sure nothing is out of view
     if(this.y + 90 >= height){
       this.y -= 90;
     }
 
+    // move across screen
     this.move = function () {
       this.x += random(this.speed);
       if (this.x >= window.width) {
@@ -51,6 +60,7 @@ class Button {
       }
     };
 
+    // actually creating the buttons
     let btn = createButton(txt);
     this.display = function () {
       btn.size(this.d, this.d);
@@ -62,8 +72,8 @@ class Button {
   }
 }
 
-// Jitter class
-class Jitter {
+// copy of above, basically
+class Circles {
   constructor() {
     this.x = random(width);
     this.y = random(height);
@@ -82,6 +92,7 @@ class Jitter {
     }
   }
 
+  // creating circles identical to the buttons
   display() {
     strokeWeight(3);
     fill(this.color);
@@ -94,4 +105,8 @@ function linkToA(){
 }
 function linkToB(){
     window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/matchingMinigame.html","_self");
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

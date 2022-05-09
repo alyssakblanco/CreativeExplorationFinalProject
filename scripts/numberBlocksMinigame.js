@@ -2,13 +2,13 @@ console.log("blocks minigame page");
 
 let btn1, btn2;
 
-
 function setup() {
     //setting canvas as full screen background
     let canvas = createCanvas(windowWidth, windowHeight);  
     canvas.position(0,0);
     canvas.style("z-index", "-1");
 
+    // creating buttons and adding them to the dom
     btn1 = createButton("left");
     btn1.mousePressed(linkToB);
     btn1.addClass('btn');
@@ -33,6 +33,7 @@ function draw(){
 
     background(green);
 
+    // setting a uniform height and width
     const y = height/4;
     const w = height/10;
 
@@ -70,10 +71,12 @@ function draw(){
     fill(blue);
     rect(x5-15,y+10,w,w);
 
+    // getting the guess input from user
     let num1 = document.getElementById("num1").value;
     let num2 = document.getElementById("num2").value;
     let num3 = document.getElementById("num3").value;
 
+    // checking for the right answer
     if(num1 == 2 && num2 == 5 && num3 == 3){
         winState();
     }
@@ -83,6 +86,7 @@ function draw(){
     }  
 }
 
+// show buttons if win
 function winState(){
     btn1.style("display", "block");
     btn2.style("display", "block");
@@ -93,4 +97,8 @@ function linkToA(){
 }
 function linkToB(){
     window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/optionsRoom.html","_self");
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }

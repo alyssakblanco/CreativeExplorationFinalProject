@@ -7,6 +7,7 @@ function setup() {
     canvas.style("z-index", "-1");
     background(color('#F2D5EA'));
 
+    // creating two buttons and attaching them to the DOM
     const btn1 = createButton("this way");
     btn1.mousePressed(linkToB);
     btn1.addClass('btn');
@@ -24,6 +25,7 @@ function setup() {
     btn2.attribute("onmouseout", "btn2Out()");
 }
 
+// functions to change background color on hover only
 function btn1Hover(){
     background(color('#F2CB07'));
 }
@@ -38,11 +40,17 @@ function btn2Out(){
     background(color('#F2D5EA'));
 }
 
+// links to the next page
 function linkToA(){
     window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/catchMeIfYouCan.html","_self");
 }
 function linkToB(){
     window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/partyRoom.html","_self");
+}
+
+// resizing canvas with window
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }
 
 
