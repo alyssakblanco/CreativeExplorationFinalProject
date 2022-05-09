@@ -61,8 +61,8 @@ function draw(){
 }
 
 function linkToA(){
-    window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/matchingMiniGame.html","_self");
+    window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/matchingMinigame.html","_self");
 }
 function linkToB(){
-    window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/numberBlocksMinigame.html","_self");
+    window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/numberBlocksMiniGame.html","_self");
 }

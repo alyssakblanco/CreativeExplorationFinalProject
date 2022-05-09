@@ -2,8 +2,9 @@ console.log("btn room page");
 
 let pop;
 
+
 function preload(){
-    pop = loadSound("../misc/pop_sound.mp3");
+    pop = loadSound("pop_sound.mp3");
 }
 
 function setup() {
