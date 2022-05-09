@@ -8,13 +8,13 @@ let time2 = 250;
 let j = 0;
 
 // loding in party music
-let music;
-function preload(){
-    music = loadSound("https://alyssakblanco.github.io/CreativeExplorationFinalProject/scripts/partyMusic.mp3");
-}
+// let music;
+// function preload(){
+//     music = loadSound("https://alyssakblanco.github.io/CreativeExplorationFinalProject/scripts/partyMusic.mp3");
+// }
 
 function setup() {
-    music.play();
+    // music.play();
     
     //setting canvas as full screen background
     let canvas = createCanvas(windowWidth, windowHeight);  
