@@ -4,7 +4,7 @@ let pop;
 
 
 function preload(){
-    pop = loadSound("pop_sound.mp3");
+    pop = loadSound("scripts/pop_sound.mp3");
 }
 
 function setup() {
