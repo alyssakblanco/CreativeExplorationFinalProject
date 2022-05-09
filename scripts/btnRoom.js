@@ -3,7 +3,7 @@ console.log("btn room page");
 // loding in pop sound effect
 let pop;
 function preload(){
-    pop = loadSound("/scripts/pop_sound.mp3");
+    pop = loadSound("CreativeExplorationFinalProject/scripts/pop_sound.mp3");
 }
 
 function setup() {
