@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,300;1,400&family=Prata&display=swap');
-/* font-family: 'Lato', sans-serif;
-font-family: 'Prata', serif; */
+
 :root{
     --blue: #248EA6;
     --lightBlue: #25C7D9;
@@ -10,6 +9,7 @@ font-family: 'Prata', serif; */
 }
 
 *{
+    overflow: hidden;
     margin: 0px;
 }
 
