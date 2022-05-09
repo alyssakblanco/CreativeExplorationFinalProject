@@ -50,6 +50,7 @@ function linkToB(){
 
 // resizing canvas with window
 function windowResized() {
+    background(color('#F2D5EA'));
     resizeCanvas(windowWidth, windowHeight);
 }
 

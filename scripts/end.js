@@ -66,7 +66,7 @@ function firstClick(){
 }
 
 function linkToA(){
-    window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/index.html","self");
+    window.open("https://alyssakblanco.github.io/CreativeExplorationFinalProject/index.html","_self");
 }
 
 // confetti object constructor
