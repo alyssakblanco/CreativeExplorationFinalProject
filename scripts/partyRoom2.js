@@ -34,7 +34,7 @@ function setup() {
 }
 
 function draw(){
-    pop.play();
+    music.play();
     // colors and saving them in an array
     let a = color('#248EA6');
     let b = color('#25C7D9');
